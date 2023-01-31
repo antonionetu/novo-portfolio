@@ -27,11 +27,13 @@ const Contents = styled.div`
 	justify-content: center;
 	align-items: center;
 
-	div {
-		width: 45vw;
-
+	div.changer {
+		width: 55vw;
 		position: relative;
-		right: 5vw;
+
+		p {
+			font-size: 1.3vw;
+		}
 	}
 `
 export default Content

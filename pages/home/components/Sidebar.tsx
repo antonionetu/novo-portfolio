@@ -14,12 +14,7 @@ export const SideBar = () => {
 					flexDirection: "column",
 				}}
 			>
-				<Image
-					src="/logo.png"
-					alt="Picture of the author"
-					width={200}
-					height={80}
-				/>
+				<Image src="/logo.png" alt="Logo de Antônio" width={200} height={80} />
 				<Navigation>
 					<ul>
 						<li

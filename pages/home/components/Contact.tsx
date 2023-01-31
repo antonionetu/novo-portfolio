@@ -2,7 +2,7 @@ import { Main } from "../style"
 
 export const Contact = () => {
 	return (
-		<div>
+		<div className="changer">
 			<Main>
 				<p>Contact</p>
 			</Main>

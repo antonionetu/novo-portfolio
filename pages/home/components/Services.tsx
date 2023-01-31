@@ -2,7 +2,7 @@ import { Main } from "../style"
 
 export const Services = () => {
 	return (
-		<div>
+		<div className="changer">
 			<Main>
 				<p>Services</p>
 			</Main>
