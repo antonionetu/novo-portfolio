@@ -26,3 +26,5 @@ export const Changer = () => {
 		return <Contact />
 	}
 }
+
+export default Changer

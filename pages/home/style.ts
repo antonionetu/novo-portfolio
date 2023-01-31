@@ -26,3 +26,5 @@ export const Main = styled.main`
 `
 
 export const Footer = styled.footer``
+
+export default Main

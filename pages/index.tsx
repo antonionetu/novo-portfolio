@@ -2,7 +2,12 @@ import Head from "next/head"
 import { Content } from "./home/index"
 import { createContext, useState } from "react"
 
-export const ContentContext = createContext(null)
+interface ContextData {
+	contents: string
+	setContents: any
+}
+
+export const ContentContext = createContext<ContextData>({} as ContextData)
 
 export default function Index() {
 	const [contents, setContents] = useState("home")

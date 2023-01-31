@@ -34,3 +34,4 @@ const Contents = styled.div`
 		right: 5vw;
 	}
 `
+export default Content

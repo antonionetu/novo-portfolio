@@ -101,3 +101,5 @@ const Navigation = styled.nav`
 		}
 	}
 `
+
+export default SideBar
