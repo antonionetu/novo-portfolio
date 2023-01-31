@@ -1,9 +1,9 @@
 import { useContext } from "react"
 import { ContentContext } from "../.."
 
-import { Home } from "./home"
-import { About } from "./about"
-import { Portfolio } from "./portfolio"
+import { Home } from "./Home"
+import { About } from "./About"
+import { Portfolio } from "./Portfolio"
 import { Services } from "./Services"
 import { Contact } from "./Contact"
 
