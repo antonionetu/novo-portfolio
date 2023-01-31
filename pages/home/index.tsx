@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Changer } from "./components/_changer"
-import { SideBar } from "./components/sidebar"
+import { SideBar } from "./components/Sidebar"
 
 export function Content() {
 	return (
