@@ -4,7 +4,7 @@ export const Services = () => {
 	return (
 		<div className="changer">
 			<Main>
-				<p>Services</p>
+				<p>Services.</p>
 			</Main>
 		</div>
 	)
