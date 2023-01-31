@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const Main = styled.main`
 	animation: slide-in-blurred-top 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+
 	@keyframes slide-in-blurred-tl {
 		0% {
 			-webkit-transform: translate(-1000px, -1000px) skew(80deg, 10deg);
