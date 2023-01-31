@@ -37,13 +37,14 @@ export const Home = () => {
 const Section = styled.section`
 	display: flex;
 	align-items: center;
-	gap: 0.5vw;
+	gap: 1vw;
 
 	div.text {
 		width: "25vw";
 
 		p {
 			margin-bottom: 2vw;
+			text-align: justify;
 		}
 
 		div.stacks {
