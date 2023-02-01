@@ -20,6 +20,7 @@ export default function Index() {
 
 			<ContentContext.Provider value={{ contents, setContents }}>
 				<Content />
+				<span className="dev">Ainda em desenvolvimento...</span>
 			</ContentContext.Provider>
 		</>
 	)

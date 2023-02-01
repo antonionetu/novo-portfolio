@@ -4,7 +4,7 @@ import { SideBar } from "./components/Sidebar"
 
 export function Content() {
 	return (
-		<Container>
+		<Container className="PAGE">
 			<SideBar />
 
 			<Contents>
