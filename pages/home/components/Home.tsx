@@ -27,6 +27,7 @@ export const Home = () => {
 						alt="Foto de Antônio"
 						width={200}
 						height={200}
+						priority
 					/>
 				</Section>
 			</Main>
