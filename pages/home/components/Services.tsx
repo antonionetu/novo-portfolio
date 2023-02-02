@@ -83,14 +83,8 @@ const Container = styled.div`
 				p.quote {
 					font-style: italic;
 					text-align: justify;
-					position: relative;
-					top: 10%;
 				}
 			}
-		}
-
-		section.services {
-			height: 20vh;
 		}
 
 		h3 {
@@ -109,8 +103,6 @@ const Container = styled.div`
 		}
 
 		section.stacks {
-			margin-top: 5vw;
-
 			flex-direction: column;
 			justify-content: space-evenly;
 			gap: 0px;
