@@ -93,13 +93,23 @@ const Container = styled.div`
 			height: 20vh;
 		}
 
+		h3 {
+			text-align: center;
+		}
+
+		ul {
+			li {
+				font-family: "Playfair Display";
+			}
+		}
+
+		h2 {
+			text-align: center;
+			margin-bottom: 0px;
+		}
+
 		section.stacks {
 			margin-top: 5vw;
-
-			h2 {
-				text-align: center;
-				margin-bottom: 0px;
-			}
 
 			flex-direction: column;
 			justify-content: space-evenly;
@@ -112,15 +122,6 @@ const Container = styled.div`
 
 				div {
 					width: 30%;
-					h3 {
-						text-align: center;
-					}
-
-					ul {
-						li {
-							font-family: "Playfair Display";
-						}
-					}
 				}
 			}
 		}
