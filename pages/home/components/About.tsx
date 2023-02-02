@@ -19,7 +19,7 @@ export const About = () => {
 						Participei de vários projetos propostos pela UFS (anteriormente
 						citada), empresas de educação, COD3R, Fundação Bradesco, Curso em
 						Video, cursos na Udemy e atualmente como universitário em Ciência da
-						Computação na UNIT e freelancer na Workana.
+						Computação na UNIT.
 					</p>
 				</Section>
 			</Main>
