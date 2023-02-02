@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Changer } from "./components/_changer"
 import { SideBar } from "./components/Sidebar"
 
-export function Content() {
+export default function Content() {
 	return (
 		<Container className="PAGE">
 			<SideBar />
@@ -36,4 +36,3 @@ const Contents = styled.div`
 		}
 	}
 `
-export default Content
