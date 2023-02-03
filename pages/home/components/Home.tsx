@@ -41,6 +41,8 @@ const Section = styled.section`
 	display: flex;
 	@media screen and (max-width: 500px) {
 		flex-direction: column-reverse;
+		width: 90%;
+		margin: auto;
 	}
 	align-items: center;
 	gap: 1vw;
