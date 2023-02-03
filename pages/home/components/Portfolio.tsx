@@ -1,12 +1,11 @@
 import Image from "next/image"
-import { useState } from "react"
 import styled from "styled-components"
 import { Main } from "../style"
-import Loader from "./components/loader"
 
 interface PropsType {
 	link: string
 	image: string
+	priority?: boolean
 }
 
 export const Portfolio = () => {
@@ -17,11 +16,13 @@ export const Portfolio = () => {
 					<Item
 						image="/portfolio/jessica_bede.png"
 						link="https://jessica-bede.vercel.app"
+						priority
 					/>
 					<hr />
 					<Item
 						image="/portfolio/netflix_clone.png"
 						link="https://github.com/antonionetodeveloper/netflix-clone"
+						priority
 					/>
 					<hr />
 					<Item
@@ -62,40 +63,37 @@ const Section = styled.section`
 	}
 `
 
-const Item = ({ link, image }: PropsType) => {
-	const [loading, setLoading] = useState(true)
-	const stopLoadingHandle = () => {
-		setLoading(false)
-	}
-
+const Item = ({ link, image, priority }: PropsType) => {
 	return (
 		<ItemContent>
-			{loading ? (
+			{priority ? (
 				<>
-					<div
-						style={{
-							minHeight: "200px",
-							display: "flex",
-							justifyContent: "center",
-						}}
-					>
-						<Loader />
-						<div style={{ display: "none" }}>
-							<Image
-								onLoadingComplete={stopLoadingHandle() as any}
-								src={image}
-								alt="projeto"
-								width={300}
-								height={200}
-								placeholder="blur"
-								loading="lazy"
-							/>
-						</div>
-					</div>
+					<Image
+						src={image}
+						alt="projeto"
+						width={300}
+						height={200}
+						priority
+						layout="responsive"
+						loading="lazy"
+						placeholder="blur"
+					/>
+					<a href={link} target="_blank" rel="noreferrer">
+						saiba mais{" "}
+						<img src="/linkIcon.png" alt="Ícone de link" className="linkIcon" />
+					</a>
 				</>
 			) : (
 				<>
-					<Image src={image} alt="projeto" width={300} height={200} />
+					<Image
+						src={image}
+						alt="projeto"
+						width={300}
+						height={200}
+						layout="responsive"
+						loading="lazy"
+						placeholder="blur"
+					/>
 					<a href={link} target="_blank" rel="noreferrer">
 						saiba mais{" "}
 						<img src="/linkIcon.png" alt="Ícone de link" className="linkIcon" />
