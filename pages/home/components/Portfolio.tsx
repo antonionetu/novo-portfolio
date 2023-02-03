@@ -5,6 +5,7 @@ import { Main } from "../style"
 interface PropsType {
 	link: string
 	image: string
+	margin_fix?: boolean
 }
 
 export const Portfolio = () => {
@@ -37,6 +38,7 @@ export const Portfolio = () => {
 					<Item
 						image="/portfolio/login_azure.png"
 						link="https://github.com/antonionetodeveloper/login_ui"
+						margin_fix
 					/>
 				</Section>
 			</Main>
@@ -50,19 +52,35 @@ const Section = styled.section`
 	overflow-y: scroll;
 	gap: 2vw;
 
+	@media screen and (max-width: 500px) {
+		width: 90vw;
+	}
+
 	hr {
 		width: 90%;
 	}
 `
 
-const Item = ({ link, image }: PropsType) => {
+const Item = ({ link, image, margin_fix }: PropsType) => {
 	return (
 		<ItemContent>
-			<Image src={image} alt="projeto exemplo" width={300} height={200} />
-			<a href={link} target="_blank" rel="noreferrer">
-				saiba mais{" "}
-				<img src="/linkIcon.png" alt="Ícone de link" className="linkIcon" />
-			</a>
+			{margin_fix ? (
+				<div style={{ marginBottom: "50px" }}>
+					<Image src={image} alt="projeto exemplo" width={300} height={200} />
+					<a href={link} target="_blank" rel="noreferrer">
+						saiba mais{" "}
+						<img src="/linkIcon.png" alt="Ícone de link" className="linkIcon" />
+					</a>
+				</div>
+			) : (
+				<>
+					<Image src={image} alt="projeto exemplo" width={300} height={200} />
+					<a href={link} target="_blank" rel="noreferrer">
+						saiba mais{" "}
+						<img src="/linkIcon.png" alt="Ícone de link" className="linkIcon" />
+					</a>
+				</>
+			)}
 		</ItemContent>
 	)
 }
@@ -75,6 +93,9 @@ const ItemContent = styled.div`
 	a {
 		width: 20%;
 		display: flex;
+		@media screen and (max-width: 500px) {
+			display: none;
+		}
 		align-items: center;
 		justify-content: center;
 		font-size: 1.5vw;

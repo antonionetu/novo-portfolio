@@ -58,6 +58,12 @@ export const Contact = () => {
 
 const Container = styled.section`
 	main {
+		@media screen and (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
 		h2 {
 			text-align: center;
 		}
@@ -68,6 +74,10 @@ const Container = styled.section`
 			width: 40vw;
 			gap: 3vw;
 			margin-top: 5vw;
+
+			@media screen and (max-width: 500px) {
+				width: 80vw;
+			}
 
 			div.icon {
 				width: 20%;

@@ -22,13 +22,15 @@ export const Home = () => {
 							<p>TypeScript</p>
 						</div>
 					</div>
-					<Image
-						src="/myPhoto.png"
-						alt="Foto de Antônio"
-						width={200}
-						height={200}
-						priority
-					/>
+					<div className="image-container">
+						<Image
+							src="/myPhoto.png"
+							alt="Foto de Antônio"
+							width={200}
+							height={200}
+							priority
+						/>
+					</div>
 				</Section>
 			</Main>
 		</div>
@@ -37,6 +39,9 @@ export const Home = () => {
 
 const Section = styled.section`
 	display: flex;
+	@media screen and (max-width: 500px) {
+		flex-direction: column-reverse;
+	}
 	align-items: center;
 	gap: 1vw;
 
@@ -45,18 +50,38 @@ const Section = styled.section`
 
 		p {
 			margin-bottom: 2vw;
+			@media screen and (max-width: 500px) {
+				font-size: 5vw;
+				margin-bottom: 10vw;
+			}
 			text-align: justify;
 		}
 
 		div.stacks {
 			display: flex;
 			gap: 1vw;
+			@media screen and (max-width: 500px) {
+				gap: 5vw;
+			}
 			justify-content: center;
 			align-items: center;
 
 			p {
 				margin: 0px;
 			}
+		}
+	}
+	.image-container {
+		width: 50%;
+
+		div {
+			position: unset !important;
+		}
+
+		.image {
+			object-fit: contain;
+			width: 100% !important;
+			height: unset !important;
 		}
 	}
 `

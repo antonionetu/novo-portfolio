@@ -66,6 +66,10 @@ export const Services = () => {
 }
 
 const Container = styled.div`
+	@media screen and (max-width: 500px) {
+		width: 90%;
+	}
+
 	main {
 		section {
 			display: flex;
@@ -89,6 +93,9 @@ const Container = styled.div`
 
 		h3 {
 			text-align: center;
+			@media screen and (max-width: 500px) {
+				font-size: 4.5vw;
+			}
 		}
 
 		ul {
@@ -100,6 +107,9 @@ const Container = styled.div`
 		h2 {
 			text-align: center;
 			margin-bottom: 0px;
+			@media screen and (max-width: 500px) {
+				margin-top: 10vw;
+			}
 		}
 
 		section.stacks {
@@ -110,10 +120,20 @@ const Container = styled.div`
 			div.stacks {
 				display: flex;
 				justify-content: center;
+				@media screen and (max-width: 500px) {
+					justify-content: space-between;
+				}
 				gap: 3vw;
 
 				div {
 					width: 30%;
+
+					ul {
+						@media screen and (max-width: 500px) {
+							padding: 0px;
+							list-style-type: none;
+						}
+					}
 				}
 			}
 		}

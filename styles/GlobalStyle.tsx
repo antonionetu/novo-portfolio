@@ -2,20 +2,6 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
 	body {
-		@media screen and (max-width: 500px) {
-			div.PAGE{
-				display: none;
-			}
-			span.dev{
-				display: block;
-				text-align: center;
-			}
-		}
-
-		.dev{
-			display: none;
-		}
-
 		max-height: 100vh;
 		overflow-y: hidden;
 		overflow-x: none;

@@ -31,6 +31,10 @@ const Section = styled.section`
 	p {
 		text-align: justify;
 		width: 80%;
+		@media screen and (max-width: 500px) {
+			width: 80vw;
+			font-size: 4.5vw;
+		}
 	}
 `
 

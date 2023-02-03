@@ -4,7 +4,7 @@ import { SideBar } from "./components/Sidebar"
 
 export function Content() {
 	return (
-		<Container className="PAGE">
+		<Container>
 			<SideBar />
 
 			<Contents>
@@ -16,10 +16,18 @@ export function Content() {
 
 const Container = styled.div`
 	display: flex;
+	@media screen and (max-width: 500px) {
+		flex-direction: column;
+	}
 `
 
 const Contents = styled.div`
 	height: 100vh;
+	@media screen and (max-width: 500px) {
+		height: 75vh;
+		width: 100%;
+	}
+
 	width: 70%;
 
 	display: flex;
@@ -27,12 +35,14 @@ const Contents = styled.div`
 	justify-content: center;
 	align-items: center;
 
-	div.changer {
-		width: 55vw;
-		position: relative;
+	@media screen and (min-width: 501px) {
+		div.changer {
+			width: 55vw;
+			position: relative;
 
-		p {
-			font-size: 1.3vw;
+			p {
+				font-size: 1.3vw;
+			}
 		}
 	}
 `

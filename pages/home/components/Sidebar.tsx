@@ -14,7 +14,15 @@ export const SideBar = () => {
 					flexDirection: "column",
 				}}
 			>
-				<Image src="/logo.png" alt="Logo de Antônio" width={200} height={80} />
+				<div className="image-container">
+					<Image
+						src="/logo.png"
+						alt="Logo de Antônio"
+						width={200}
+						height={80}
+						className="image"
+					/>
+				</div>
 				<Navigation>
 					<ul>
 						<li
@@ -22,35 +30,35 @@ export const SideBar = () => {
 								setContents("home")
 							}}
 						>
-							Home
+							<p>Home</p>
 						</li>
 						<li
 							onClick={() => {
 								setContents("about")
 							}}
 						>
-							Sobre mim
+							<p>Sobre mim</p>
 						</li>
 						<li
 							onClick={() => {
 								setContents("portfolio")
 							}}
 						>
-							Portifólio
+							<p>Portifólio</p>
 						</li>
 						<li
 							onClick={() => {
 								setContents("services")
 							}}
 						>
-							Serviços
+							<p>Serviços</p>
 						</li>
 						<li
 							onClick={() => {
 								setContents("contact")
 							}}
 						>
-							Contato
+							<p className="lastWord">Contato</p>
 						</li>
 					</ul>
 				</Navigation>
@@ -67,6 +75,34 @@ const Container = styled.div`
 	justify-content: end;
 	align-items: center;
 	z-index: 2;
+
+	@media screen and (max-width: 500px) {
+		height: 25vh;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+
+		header {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.image-container {
+			width: 50%;
+
+			div {
+				position: unset !important;
+			}
+
+			.image {
+				object-fit: contain;
+				width: 100% !important;
+				height: unset !important;
+			}
+		}
+	}
 `
 
 const Navigation = styled.nav`
@@ -74,24 +110,45 @@ const Navigation = styled.nav`
 	flex-direction: column;
 	gap: 2vw;
 
+	@media screen and (max-width: 500px) {
+		width: 80vw;
+	}
+
 	ul {
 		list-style-type: none;
 		display: flex;
 		flex-direction: column;
 		gap: 1vw;
 
+		@media screen and (max-width: 500px) {
+			flex-direction: row;
+			justify-content: center;
+			padding: 0px;
+			gap: 3vw;
+			li {
+				p {
+					font-size: 4vw;
+					text-align: center;
+				}
+			}
+		}
+
 		li {
-			font-family: "Audiowide";
+			p {
+				font-family: "Audiowide";
+			}
 			color: #a0a0a0;
 			font-size: 1.5vw;
 			padding: 0px;
 			transition: 0.3s;
 
-			:hover {
-				font-size: 2vw;
-				cursor: pointer;
-				color: #fff;
-				padding: 10px 0px 10px 5px;
+			@media screen and (min-width: 500px) {
+				:hover {
+					font-size: 2vw;
+					cursor: pointer;
+					color: #fff;
+					padding: 10px 0px 10px 5px;
+				}
 			}
 		}
 	}
