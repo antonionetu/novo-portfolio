@@ -1,10 +1,11 @@
 import Image from "next/image"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { useContext } from "react"
 import { ContentContext } from "../.."
 
 export const SideBar = () => {
-	const { setContents } = useContext(ContentContext)
+	const { contents, setContents } = useContext(ContentContext)
+	console.log("1 ->", contents)
 
 	return (
 		<Container>
@@ -23,9 +24,10 @@ export const SideBar = () => {
 						className="image"
 					/>
 				</div>
-				<Navigation>
+				<Navigation currentSection={contents}>
 					<ul>
 						<li
+							className="home"
 							onClick={() => {
 								setContents("home")
 							}}
@@ -33,6 +35,7 @@ export const SideBar = () => {
 							<p>Home</p>
 						</li>
 						<li
+							className="about"
 							onClick={() => {
 								setContents("about")
 							}}
@@ -40,6 +43,7 @@ export const SideBar = () => {
 							<p>Sobre mim</p>
 						</li>
 						<li
+							className="portfolio"
 							onClick={() => {
 								setContents("portfolio")
 							}}
@@ -47,6 +51,7 @@ export const SideBar = () => {
 							<p>Portifólio</p>
 						</li>
 						<li
+							className="services"
 							onClick={() => {
 								setContents("services")
 							}}
@@ -54,6 +59,7 @@ export const SideBar = () => {
 							<p>Serviços</p>
 						</li>
 						<li
+							className="contact"
 							onClick={() => {
 								setContents("contact")
 							}}
@@ -91,6 +97,9 @@ const Container = styled.div`
 
 		.image-container {
 			width: 50%;
+			height: 12vh;
+			position: absolute;
+			top: 2vh;
 
 			div {
 				position: unset !important;
@@ -105,9 +114,12 @@ const Container = styled.div`
 	}
 `
 
-const Navigation = styled.nav`
+const Navigation: any = styled.nav`
 	display: flex;
 	flex-direction: column;
+	height: 13vh;
+	position: absolute;
+	top: 12vh;
 	gap: 2vw;
 
 	@media screen and (max-width: 500px) {
@@ -131,17 +143,47 @@ const Navigation = styled.nav`
 					text-align: center;
 				}
 			}
+
+			${(props: any): any => {
+				console.log(props.currentSection)
+				if (props.currentSection) {
+					return css`
+						li.${props.currentSection} {
+							font-size: 2vw;
+							cursor: pointer;
+							color: #fff;
+							margin-top: 2vw;
+							padding: 0px 5px 0px 5px;
+						}
+					`
+				}
+			}}
 		}
+
+		${(props: any): any => {
+			console.log(props.currentSection)
+			if (props.currentSection) {
+				return css`
+					li.${props.currentSection} {
+						font-size: 2vw;
+						cursor: pointer;
+						color: #fff;
+						padding: 10px 0px 10px 5px;
+					}
+				`
+			}
+		}}
 
 		li {
 			p {
 				font-family: "Audiowide";
 			}
+
 			color: #a0a0a0;
 			font-size: 1.5vw;
 			padding: 0px;
-			transition: 0.3s;
 
+			transition: 0.3s;
 			@media screen and (min-width: 500px) {
 				:hover {
 					font-size: 2vw;

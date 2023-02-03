@@ -10,7 +10,7 @@ interface ContextData {
 export const ContentContext = createContext<ContextData>({} as ContextData)
 
 export default function Index() {
-	const [contents, setContents] = useState("home")
+	const [contents, setContents] = useState("indexState")
 
 	return (
 		<>
