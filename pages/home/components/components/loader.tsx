@@ -2,48 +2,83 @@ import styled from "styled-components"
 
 const Loader = () => {
 	return (
-		<Container viewBox="25 25 50 50">
-			<circle r="20" cy="50" cx="50"></circle>
+		<Container>
+			<div className="loader">
+				<div className="circle"></div>
+				<div className="circle"></div>
+				<div className="circle"></div>
+				<div className="circle"></div>
+			</div>
 		</Container>
 	)
 }
 
-const Container = styled.svg`
-	svg {
-		width: 3.25em;
-		transform-origin: center;
-		animation: rotate4 2s linear infinite;
+const Container = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.loader {
+		--dim: 3rem;
+		width: var(--dim);
+		height: var(--dim);
+		position: relative;
+		animation: spin988 2s linear infinite;
 	}
 
-	circle {
-		fill: none;
-		stroke: hsl(0, 0%, 100%);
-		stroke-width: 2;
-		stroke-dasharray: 1, 200;
-		stroke-dashoffset: 0;
-		stroke-linecap: round;
-		animation: dash4 1.5s ease-in-out infinite;
+	.loader .circle {
+		--color: #cccccc;
+		--dim: 1.2rem;
+		width: var(--dim);
+		height: var(--dim);
+		background-color: var(--color);
+		border-radius: 50%;
+		position: absolute;
 	}
 
-	@keyframes rotate4 {
-		100% {
-			transform: rotate(360deg);
-		}
+	.loader .circle:nth-child(1) {
+		top: 0;
+		left: 0;
 	}
 
-	@keyframes dash4 {
+	.loader .circle:nth-child(2) {
+		top: 0;
+		right: 0;
+	}
+
+	.loader .circle:nth-child(3) {
+		bottom: 0;
+		left: 0;
+	}
+
+	.loader .circle:nth-child(4) {
+		bottom: 0;
+		right: 0;
+	}
+
+	@keyframes spin988 {
 		0% {
-			stroke-dasharray: 1, 200;
-			stroke-dashoffset: 0;
+			transform: scale(1) rotate(0);
 		}
 
+		20%,
+		25% {
+			transform: scale(1.3) rotate(90deg);
+		}
+
+		45%,
 		50% {
-			stroke-dasharray: 90, 200;
-			stroke-dashoffset: -35px;
+			transform: scale(1) rotate(180deg);
 		}
 
+		70%,
+		75% {
+			transform: scale(1.3) rotate(270deg);
+		}
+
+		95%,
 		100% {
-			stroke-dashoffset: -125px;
+			transform: scale(1) rotate(360deg);
 		}
 	}
 `
