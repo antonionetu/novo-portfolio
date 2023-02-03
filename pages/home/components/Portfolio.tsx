@@ -65,7 +65,7 @@ const Item = ({ link, image, margin_fix }: PropsType) => {
 	return (
 		<ItemContent>
 			{margin_fix ? (
-				<div style={{ marginBottom: "50px" }}>
+				<div style={{ marginBottom: "100px" }}>
 					<Image src={image} alt="projeto exemplo" width={300} height={200} />
 					<a href={link} target="_blank" rel="noreferrer">
 						saiba mais{" "}
