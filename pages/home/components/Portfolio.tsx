@@ -88,6 +88,7 @@ const Item = ({ link, image }: PropsType) => {
 								width={300}
 								height={200}
 								placeholder="blur"
+								loading="lazy"
 							/>
 						</div>
 					</div>
