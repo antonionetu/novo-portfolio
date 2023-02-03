@@ -87,6 +87,7 @@ const Item = ({ link, image }: PropsType) => {
 								alt="projeto"
 								width={300}
 								height={200}
+								placeholder="blur"
 							/>
 						</div>
 					</div>
