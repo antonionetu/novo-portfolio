@@ -117,13 +117,13 @@ const Container = styled.div`
 const Navigation: any = styled.nav`
 	display: flex;
 	flex-direction: column;
-	height: 13vh;
-	position: absolute;
-	top: 12vh;
-	gap: 2vw;
 
 	@media screen and (max-width: 500px) {
 		width: 80vw;
+		height: 13vh;
+		position: absolute;
+		top: 12vh;
+		gap: 2vw;
 	}
 
 	ul {

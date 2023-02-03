@@ -1,6 +1,8 @@
 import Image from "next/image"
+import { useState } from "react"
 import styled from "styled-components"
 import { Main } from "../style"
+import Loader from "./components/loader"
 
 interface PropsType {
 	link: string
@@ -62,8 +64,31 @@ const Section = styled.section`
 `
 
 const Item = ({ link, image, margin_fix }: PropsType) => {
+	const [loading, setLoading] = useState(true)
+
 	return (
 		<ItemContent>
+			{loading ? (
+				<>
+					<Loader />
+					<Image
+						src={image}
+						alt="projeto exemplo"
+						width={300}
+						height={200}
+						style={{ display: "none" }}
+					/>
+				</>
+			) : (
+				<>
+					<Image src={image} alt="projeto exemplo" width={300} height={200} />
+					<a href={link} target="_blank" rel="noreferrer">
+						saiba mais{" "}
+						<img src="/linkIcon.png" alt="Ícone de link" className="linkIcon" />
+					</a>
+				</>
+			)}
+			{/*
 			{margin_fix ? (
 				<div style={{ marginBottom: "100px" }}>
 					<Image src={image} alt="projeto exemplo" width={300} height={200} />
@@ -80,7 +105,7 @@ const Item = ({ link, image, margin_fix }: PropsType) => {
 						<img src="/linkIcon.png" alt="Ícone de link" className="linkIcon" />
 					</a>
 				</>
-			)}
+			)} */}
 		</ItemContent>
 	)
 }
