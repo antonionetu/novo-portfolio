@@ -82,7 +82,7 @@ const Item = ({ link, image }: PropsType) => {
 						<Loader />
 						<div style={{ display: "none" }}>
 							<Image
-								onLoad={stopLoadingHandle() as any}
+								onLoadingComplete={stopLoadingHandle() as any}
 								src={image}
 								alt="projeto"
 								width={300}
