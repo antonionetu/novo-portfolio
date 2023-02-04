@@ -5,6 +5,7 @@
 		"build": "next build",
 		"start": "next start"
 	},
+	"name": "novo-portifolio",
 	"dependencies": {
 		"next": "latest",
 		"next-connect": "^0.13.0",

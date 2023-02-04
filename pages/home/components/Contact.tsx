@@ -19,7 +19,7 @@ export const Contact = () => {
 							rel="noreferrer"
 						>
 							<Image
-								src={images.contact.whatsapp}
+								src={images?.contact.whatsapp}
 								width={100}
 								height={100}
 								alt="Whatsapp"
@@ -33,7 +33,7 @@ export const Contact = () => {
 							rel="noreferrer"
 						>
 							<Image
-								src={images.contact.linkedin}
+								src={images?.contact.linkedin}
 								width={100}
 								height={100}
 								alt="Linkedin"
@@ -47,7 +47,7 @@ export const Contact = () => {
 							rel="noreferrer"
 						>
 							<Image
-								src={images.contact.github}
+								src={images?.contact.github}
 								width={100}
 								height={100}
 								alt="Github"

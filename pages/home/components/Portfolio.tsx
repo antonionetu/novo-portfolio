@@ -12,45 +12,45 @@ interface PropsType {
 
 export const Portfolio = () => {
 	const { images } = useContext(ContentContext)
-	const portfolio = images.portfolio
+	const portfolio = images?.portfolio
 
 	return (
 		<div className="changer">
 			<Main>
 				<Section>
 					<Item
-						image={portfolio.jessica_bede}
-						blur={portfolio.blurred_jessica_bede}
+						image={portfolio?.jessica_bede}
+						blur={portfolio?.blurred_jessica_bede}
 						link="https://jessica-bede.vercel.app"
 					/>
 					<hr />
 					<Item
-						image={portfolio.netflix_clone}
-						blur={portfolio.blurred_netflix_clone}
+						image={portfolio?.netflix_clone}
+						blur={portfolio?.blurred_netflix_clone}
 						link="https://github.com/antonionetodeveloper/netflix-clone"
 					/>
 					<hr />
 					<Item
-						image={portfolio.escolinha}
-						blur={portfolio.blurred_escolinha}
+						image={portfolio?.escolinha}
+						blur={portfolio?.blurred_escolinha}
 						link="https://learning-next-beryl.vercel.app"
 					/>
 					<hr />
 					<Item
-						image={portfolio.CRUD}
-						blur={portfolio.blurred_CRUD}
+						image={portfolio?.CRUD}
+						blur={portfolio?.blurred_CRUD}
 						link="https://github.com/antonionetodeveloper/CRUD"
 					/>
 					<hr />
 					<Item
-						image={portfolio.site2it}
-						blur={portfolio.blurred_site2it}
+						image={portfolio?.site2it}
+						blur={portfolio?.blurred_site2it}
 						link="https://site2it.com"
 					/>
 					<hr />
 					<Item
-						image={portfolio.login_azure}
-						blur={portfolio.blurred_login_azure}
+						image={portfolio?.login_azure}
+						blur={portfolio?.blurred_login_azure}
 						link="https://github.com/antonionetodeveloper/login_ui"
 					/>
 				</Section>

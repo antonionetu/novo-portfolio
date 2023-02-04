@@ -13,7 +13,7 @@ export const Services = () => {
 				<section className="services">
 					<div>
 						<Image
-							src={images.services}
+							src={images?.services}
 							width={300}
 							height={300}
 							className="Image"

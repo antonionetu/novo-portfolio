@@ -28,7 +28,7 @@ export const Home = () => {
 					</div>
 					<div className="image-container">
 						<Image
-							src={images.profile}
+							src={images?.profile}
 							alt="Foto de Antônio"
 							width={200}
 							height={200}
