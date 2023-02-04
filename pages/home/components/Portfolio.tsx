@@ -10,57 +10,47 @@ interface PropsType {
 	blur: string
 }
 
-export async function getBlurredImage(
-	imageId: string,
-): Promise<string | undefined> {
-	const response = await fetch(
-		`https://res.cloudinary.com/dxujuvdh8/image/upload/w_100/e_blur:1000,q_auto,f_webp/v1675471479/${imageId}`,
-	)
-	const buffer = await response.arrayBuffer()
-	const data = Buffer.from(buffer).toString("base64")
-	return `data:image/webp;base64,${data}`
-}
-
 export const Portfolio = () => {
 	const { images } = useContext(ContentContext)
+	const portfolio = images.portfolio
 
 	return (
 		<div className="changer">
 			<Main>
 				<Section>
 					<Item
-						image={images.portfolio.jessica_bede}
-						blur={images.portfolio.blurred_jessica_bede}
+						image={portfolio.jessica_bede}
+						blur={portfolio.blurred_jessica_bede}
 						link="https://jessica-bede.vercel.app"
 					/>
 					<hr />
 					<Item
-						image={images.portfolio.netflix_clone}
-						blur={images.portfolio.blurred_netflix_clone}
+						image={portfolio.netflix_clone}
+						blur={portfolio.blurred_netflix_clone}
 						link="https://github.com/antonionetodeveloper/netflix-clone"
 					/>
 					<hr />
 					<Item
-						image={images.portfolio.escolinha}
-						blur={images.portfolio.blurred_escolinha}
+						image={portfolio.escolinha}
+						blur={portfolio.blurred_escolinha}
 						link="https://learning-next-beryl.vercel.app"
 					/>
 					<hr />
 					<Item
-						image={images.portfolio.CRUD}
-						blur={images.portfolio.blurred_CRUD}
+						image={portfolio.CRUD}
+						blur={portfolio.blurred_CRUD}
 						link="https://github.com/antonionetodeveloper/CRUD"
 					/>
 					<hr />
 					<Item
-						image={images.portfolio.site2it}
-						blur={images.portfolio.blurred_site2it}
+						image={portfolio.site2it}
+						blur={portfolio.blurred_site2it}
 						link="https://site2it.com"
 					/>
 					<hr />
 					<Item
-						image={images.portfolio.login_azure}
-						blur={images.portfolio.blurred_login_azure}
+						image={portfolio.login_azure}
+						blur={portfolio.blurred_login_azure}
 						link="https://github.com/antonionetodeveloper/login_ui"
 					/>
 				</Section>

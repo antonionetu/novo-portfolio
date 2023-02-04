@@ -1,26 +1,36 @@
 import Head from "next/head"
 import { Content } from "./home/index"
 import { createContext, useState } from "react"
-import { InferGetStaticPropsType } from "next/types"
-
-interface ContextData {
-	contents: string
-	setContents: any
-	images: any
-}
+import { ContextData } from "../types/"
 
 export const ContentContext = createContext<ContextData>({} as ContextData)
 
-export async function getStaticProps() {
-	async function getBlurredImage(imageId: string): Promise<string | undefined> {
-		const response = await fetch(
-			`https://res.cloudinary.com/dxujuvdh8/image/upload/w_100/e_blur:500,q_auto,f_webp/v1675471479/${imageId}`,
-		)
-		const buffer = await response.arrayBuffer()
-		const data = Buffer.from(buffer).toString("base64")
-		return `data:image/webp;base64,${data}`
-	}
+// eslint-disable-next-line react/prop-types
+export default function Index({ images }) {
+	const [contents, setContents] = useState("indexState")
+	return (
+		<>
+			<Head>
+				<title>Portifólio</title>
+			</Head>
 
+			<ContentContext.Provider value={{ contents, setContents, images }}>
+				<Content />
+			</ContentContext.Provider>
+		</>
+	)
+}
+
+async function getBlurredImage(imageId: string): Promise<string | undefined> {
+	const response = await fetch(
+		`https://res.cloudinary.com/dxujuvdh8/image/upload/w_100/e_blur:500,q_auto,f_webp/v1675471479/${imageId}`,
+	)
+	const buffer = await response.arrayBuffer()
+	const data = Buffer.from(buffer).toString("base64")
+	return `data:image/webp;base64,${data}`
+}
+
+export async function getStaticProps() {
 	return {
 		props: {
 			images: {
@@ -66,22 +76,4 @@ export async function getStaticProps() {
 			},
 		},
 	}
-}
-
-export default function Index({
-	images,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
-	const [contents, setContents] = useState("indexState")
-
-	return (
-		<>
-			<Head>
-				<title>Portifólio</title>
-			</Head>
-
-			<ContentContext.Provider value={{ contents, setContents, images }}>
-				<Content />
-			</ContentContext.Provider>
-		</>
-	)
 }
