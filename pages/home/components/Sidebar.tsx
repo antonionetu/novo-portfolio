@@ -4,8 +4,7 @@ import { useContext } from "react"
 import { ContentContext } from "../.."
 
 export const SideBar = () => {
-	const { contents, setContents } = useContext(ContentContext)
-	console.log("1 ->", contents)
+	const { contents, setContents, images } = useContext(ContentContext)
 
 	return (
 		<Container>
@@ -17,7 +16,7 @@ export const SideBar = () => {
 			>
 				<div className="image-container">
 					<Image
-						src="/logo.png"
+						src={images.logo}
 						alt="Logo de Antônio"
 						width={200}
 						height={80}
@@ -145,7 +144,6 @@ const Navigation: any = styled.nav`
 			}
 
 			${(props: any): any => {
-				console.log(props.currentSection)
 				if (props.currentSection) {
 					return css`
 						li.${props.currentSection} {
@@ -161,7 +159,6 @@ const Navigation: any = styled.nav`
 		}
 
 		${(props: any): any => {
-			console.log(props.currentSection)
 			if (props.currentSection) {
 				return css`
 					li.${props.currentSection} {

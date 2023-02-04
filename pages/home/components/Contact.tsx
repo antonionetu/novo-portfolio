@@ -1,11 +1,15 @@
 import Image from "next/image"
+import { useContext } from "react"
 import styled from "styled-components"
+import { ContentContext } from "../.."
 import { Main } from "../style"
 
 export const Contact = () => {
+	const { images } = useContext(ContentContext)
+
 	return (
-		<Container className="changer">
-			<Main>
+		<Main>
+			<Container className="changer">
 				<h2>Entre em contato</h2>
 				<div className="icons">
 					<div className="icon">
@@ -15,7 +19,7 @@ export const Contact = () => {
 							rel="noreferrer"
 						>
 							<Image
-								src={"/contact/wpp.png"}
+								src={images.contact.whatsapp}
 								width={100}
 								height={100}
 								alt="Whatsapp"
@@ -29,7 +33,7 @@ export const Contact = () => {
 							rel="noreferrer"
 						>
 							<Image
-								src={"/contact/linkedin.png"}
+								src={images.contact.linkedin}
 								width={100}
 								height={100}
 								alt="Linkedin"
@@ -43,7 +47,7 @@ export const Contact = () => {
 							rel="noreferrer"
 						>
 							<Image
-								src={"/contact/github.png"}
+								src={images.contact.github}
 								width={100}
 								height={100}
 								alt="Github"
@@ -51,8 +55,8 @@ export const Contact = () => {
 						</a>
 					</div>
 				</div>
-			</Main>
-		</Container>
+			</Container>
+		</Main>
 	)
 }
 

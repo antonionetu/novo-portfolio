@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 
+const cloudinaryBaseUrl = `https://res.cloudinary.com/dxujuvdh8/image/upload/v1675471479/`
+
 const nextConfig = {
+	images: {
+		loader: "cloudinary",
+		path: cloudinaryBaseUrl,
+	},
 	compiler: {
 		styledComponents: true,
 	},

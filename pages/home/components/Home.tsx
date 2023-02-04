@@ -1,8 +1,12 @@
 import Image from "next/image"
+import { useContext } from "react"
 import styled from "styled-components"
+import { ContentContext } from "../.."
 import { Main } from "../style"
 
 export const Home = () => {
+	const { images } = useContext(ContentContext)
+
 	return (
 		<div className="changer">
 			<Main>
@@ -24,7 +28,7 @@ export const Home = () => {
 					</div>
 					<div className="image-container">
 						<Image
-							src="/myPhoto.png"
+							src={images.profile}
 							alt="Foto de Antônio"
 							width={200}
 							height={200}

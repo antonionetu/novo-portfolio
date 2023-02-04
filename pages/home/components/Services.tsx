@@ -1,15 +1,19 @@
 import Image from "next/image"
+import { useContext } from "react"
 import styled from "styled-components"
+import { ContentContext } from "../.."
 import { Main } from "../style"
 
 export const Services = () => {
+	const { images } = useContext(ContentContext)
+
 	return (
 		<Container className="changer">
 			<Main>
 				<section className="services">
 					<div>
 						<Image
-							src={"/services/web.svg"}
+							src={images.services}
 							width={300}
 							height={300}
 							className="Image"

@@ -1,44 +1,66 @@
 import Image from "next/image"
+import { useContext } from "react"
 import styled from "styled-components"
+import { ContentContext } from "../.."
 import { Main } from "../style"
 
 interface PropsType {
 	link: string
 	image: string
-	priority?: boolean
+	blur: string
+}
+
+export async function getBlurredImage(
+	imageId: string,
+): Promise<string | undefined> {
+	const response = await fetch(
+		`https://res.cloudinary.com/dxujuvdh8/image/upload/w_100/e_blur:1000,q_auto,f_webp/v1675471479/${imageId}`,
+	)
+	const buffer = await response.arrayBuffer()
+	const data = Buffer.from(buffer).toString("base64")
+	return `data:image/webp;base64,${data}`
 }
 
 export const Portfolio = () => {
+	const { images } = useContext(ContentContext)
+
 	return (
 		<div className="changer">
 			<Main>
 				<Section>
 					<Item
-						image="/portfolio/jessica_bede.png"
+						image={images.portfolio.jessica_bede}
+						blur={images.portfolio.blurred_jessica_bede}
 						link="https://jessica-bede.vercel.app"
-						priority
 					/>
 					<hr />
 					<Item
-						image="/portfolio/netflix_clone.png"
+						image={images.portfolio.netflix_clone}
+						blur={images.portfolio.blurred_netflix_clone}
 						link="https://github.com/antonionetodeveloper/netflix-clone"
-						priority
 					/>
 					<hr />
 					<Item
-						image="/portfolio/escolinha.png"
+						image={images.portfolio.escolinha}
+						blur={images.portfolio.blurred_escolinha}
 						link="https://learning-next-beryl.vercel.app"
 					/>
 					<hr />
 					<Item
-						image="/portfolio/CRUD.png"
+						image={images.portfolio.CRUD}
+						blur={images.portfolio.blurred_CRUD}
 						link="https://github.com/antonionetodeveloper/CRUD"
 					/>
 					<hr />
-					<Item image="/portfolio/site2it.png" link="https://site2it.com" />
+					<Item
+						image={images.portfolio.site2it}
+						blur={images.portfolio.blurred_site2it}
+						link="https://site2it.com"
+					/>
 					<hr />
 					<Item
-						image="/portfolio/login_azure.png"
+						image={images.portfolio.login_azure}
+						blur={images.portfolio.blurred_login_azure}
 						link="https://github.com/antonionetodeveloper/login_ui"
 					/>
 				</Section>
@@ -63,43 +85,24 @@ const Section = styled.section`
 	}
 `
 
-const Item = ({ link, image, priority }: PropsType) => {
+const Item = ({ link, image, blur }: PropsType) => {
 	return (
 		<ItemContent>
-			{priority ? (
-				<>
-					<Image
-						src={image}
-						alt="projeto"
-						width={300}
-						height={200}
-						priority
-						layout="responsive"
-						loading="lazy"
-						placeholder="blur"
-					/>
-					<a href={link} target="_blank" rel="noreferrer">
-						saiba mais{" "}
-						<img src="/linkIcon.png" alt="Ícone de link" className="linkIcon" />
-					</a>
-				</>
-			) : (
-				<>
-					<Image
-						src={image}
-						alt="projeto"
-						width={300}
-						height={200}
-						layout="responsive"
-						loading="lazy"
-						placeholder="blur"
-					/>
-					<a href={link} target="_blank" rel="noreferrer">
-						saiba mais{" "}
-						<img src="/linkIcon.png" alt="Ícone de link" className="linkIcon" />
-					</a>
-				</>
-			)}
+			<div>
+				<Image
+					src={image}
+					alt="projeto"
+					width={300}
+					height={200}
+					layout="responsive"
+					placeholder="blur"
+					blurDataURL={blur}
+				/>
+			</div>
+			<a href={link} target="_blank" rel="noreferrer">
+				saiba mais{" "}
+				<img src="/linkIcon.png" alt="Ícone de link" className="linkIcon" />
+			</a>
 		</ItemContent>
 	)
 }
@@ -108,6 +111,10 @@ const ItemContent = styled.div`
 	align-items: center;
 	justify-content: space-evenly;
 	gap: 2vw;
+
+	div {
+		width: 25vw;
+	}
 
 	a {
 		width: 20%;
