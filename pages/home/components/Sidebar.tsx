@@ -16,7 +16,7 @@ export const SideBar = () => {
 			>
 				<div className="image-container">
 					<Image
-						src={images.logo}
+						src={images?.logo}
 						alt="Logo de Antônio"
 						width={200}
 						height={80}
