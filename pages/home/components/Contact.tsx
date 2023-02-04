@@ -18,12 +18,14 @@ export const Contact = () => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<Image
-								src={images?.contact.whatsapp}
-								width={100}
-								height={100}
-								alt="Whatsapp"
-							/>
+							<div>
+								<Image
+									src={images?.contact.whatsapp}
+									width={100}
+									height={100}
+									alt="Whatsapp"
+								/>
+							</div>
 						</a>
 					</div>
 					<div className="icon">
@@ -32,12 +34,14 @@ export const Contact = () => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<Image
-								src={images?.contact.linkedin}
-								width={100}
-								height={100}
-								alt="Linkedin"
-							/>
+							<div>
+								<Image
+									src={images?.contact.linkedin}
+									width={100}
+									height={100}
+									alt="Linkedin"
+								/>
+							</div>
 						</a>
 					</div>
 					<div className="icon">
@@ -46,12 +50,14 @@ export const Contact = () => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<Image
-								src={images?.contact.github}
-								width={100}
-								height={100}
-								alt="Github"
-							/>
+							<div>
+								<Image
+									src={images?.contact.github}
+									width={100}
+									height={100}
+									alt="Github"
+								/>
+							</div>
 						</a>
 					</div>
 				</div>
@@ -61,37 +67,35 @@ export const Contact = () => {
 }
 
 const Container = styled.section`
-	main {
+	@media screen and (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	div.icons {
+		display: flex;
+		justify-content: center;
+		width: 40vw;
+		gap: 3vw;
+		margin-top: 5vw;
+
 		@media screen and (max-width: 500px) {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+			width: 80vw;
 		}
 
-		h2 {
-			text-align: center;
-		}
+		div.icon {
+			width: 20%;
+			padding: 0vw;
+			transition: 300ms;
 
-		div.icons {
-			display: flex;
-			justify-content: center;
-			width: 40vw;
-			gap: 3vw;
-			margin-top: 5vw;
-
-			@media screen and (max-width: 500px) {
-				width: 80vw;
-			}
-
-			div.icon {
-				width: 20%;
-				padding: 0vw;
-				transition: 300ms;
-
-				:hover {
-					cursor: pointer;
-					padding: 0vw 1vw 0vw 1vw;
-				}
+			:hover {
+				cursor: pointer;
+				padding: 0vw 1vw 0vw 1vw;
 			}
 		}
 	}
