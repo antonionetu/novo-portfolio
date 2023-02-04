@@ -11,7 +11,7 @@ export const Services = () => {
 		<Container className="changer">
 			<Main>
 				<section className="services">
-					<div>
+					<div className="image-container">
 						<Image
 							src={images?.services}
 							width={300}
@@ -79,9 +79,12 @@ const Container = styled.div`
 			display: flex;
 			gap: 5vw;
 
-			div.Image {
-				width: 60%;
+			@media screen and (max-width: 500px) {
+				.image-container {
+					display: none;
+				}
 			}
+
 			div.text {
 				display: flex;
 				flex-direction: column;

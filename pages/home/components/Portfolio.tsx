@@ -104,6 +104,9 @@ const ItemContent = styled.div`
 
 	div {
 		width: 25vw;
+		@media screen and (max-width: 500px) {
+			width: 70vw;
+		}
 	}
 
 	a {
