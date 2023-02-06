@@ -21,6 +21,7 @@ export const SideBar = () => {
 						width={200}
 						height={80}
 						className="image"
+						priority
 					/>
 				</div>
 				<Navigation currentSection={contents}>

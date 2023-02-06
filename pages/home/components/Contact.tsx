@@ -6,6 +6,7 @@ import { Main } from "../style"
 
 export const Contact = () => {
 	const { images } = useContext(ContentContext)
+	const contacts = images?.contact
 
 	return (
 		<Main>
@@ -19,10 +20,8 @@ export const Contact = () => {
 							rel="noreferrer"
 						>
 							<div>
-								<Image
-									src={images?.contact.whatsapp}
-									width={100}
-									height={100}
+								<img
+									src="https://res.cloudinary.com/dxujuvdh8/image/upload/v1675688909/portfolio/contact/wpp_nsmjwi.png"
 									alt="Whatsapp"
 								/>
 							</div>
@@ -35,10 +34,8 @@ export const Contact = () => {
 							rel="noreferrer"
 						>
 							<div>
-								<Image
-									src={images?.contact.linkedin}
-									width={100}
-									height={100}
+								<img
+									src="https://res.cloudinary.com/dxujuvdh8/image/upload/v1675688909/portfolio/contact/linkedin_jnjbjv.png"
 									alt="Linkedin"
 								/>
 							</div>
@@ -51,10 +48,8 @@ export const Contact = () => {
 							rel="noreferrer"
 						>
 							<div>
-								<Image
-									src={images?.contact.github}
-									width={100}
-									height={100}
+								<img
+									src="https://res.cloudinary.com/dxujuvdh8/image/upload/v1675688909/portfolio/contact/github_i3alve.png"
 									alt="Github"
 								/>
 							</div>
@@ -86,12 +81,30 @@ const Container = styled.section`
 
 		@media screen and (max-width: 500px) {
 			width: 80vw;
+			gap: 3vw;
 		}
 
 		div.icon {
+			@media screen and (max-width: 500px) {
+				width: 100%;
+			}
 			width: 20%;
 			padding: 0vw;
 			transition: 300ms;
+
+			a {
+				div {
+					@media screen and (max-width: 500px) {
+						width: 25vw;
+						display: flex;
+						justify-content: center;
+					}
+
+					img {
+						width: 80%;
+					}
+				}
+			}
 
 			:hover {
 				cursor: pointer;

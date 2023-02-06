@@ -67,12 +67,6 @@ export async function getStaticProps() {
 						"portfolio/portfolio/escolinha_orbnuy.png",
 					),
 				},
-				contact: {
-					whatsapp: "portfolio/contact/wpp_xpneaq.png",
-					linkedin: "portfolio/contact/linkedin_i5qx3c.png",
-					github: "portfolio/contact/github_yhj9w7.png",
-				},
-				services: "portfolio/web_ylnmu9.svg",
 			},
 		},
 	}

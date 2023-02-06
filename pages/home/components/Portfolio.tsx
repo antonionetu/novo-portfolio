@@ -68,6 +68,8 @@ const Section = styled.section`
 	@media screen and (max-width: 500px) {
 		width: 90vw;
 		height: 70vh;
+		position: relative;
+		bottom: 5vh;
 	}
 
 	hr {
@@ -83,7 +85,7 @@ const Item = ({ link, image, blur }: PropsType) => {
 					src={image}
 					alt="projeto"
 					width={300}
-					height={200}
+					height={230}
 					layout="responsive"
 					placeholder="blur"
 					blurDataURL={blur}

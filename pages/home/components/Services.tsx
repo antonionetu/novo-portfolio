@@ -1,24 +1,11 @@
-import Image from "next/image"
-import { useContext } from "react"
 import styled from "styled-components"
-import { ContentContext } from "../.."
 import { Main } from "../style"
 
 export const Services = () => {
-	const { images } = useContext(ContentContext)
-
 	return (
 		<Container className="changer">
 			<Main>
 				<section className="services">
-					<div className="image-container">
-						<Image
-							src={images?.services}
-							width={300}
-							height={300}
-							className="Image"
-						/>
-					</div>
 					<div className="text">
 						<p className="quote">
 							Meu trabalho é criar soluções para serem acessadas a qualquer
@@ -78,12 +65,6 @@ const Container = styled.div`
 		section {
 			display: flex;
 			gap: 5vw;
-
-			@media screen and (max-width: 500px) {
-				.image-container {
-					display: none;
-				}
-			}
 
 			div.text {
 				display: flex;
