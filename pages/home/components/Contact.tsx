@@ -1,13 +1,8 @@
-import Image from "next/image"
-import { useContext } from "react"
+/* eslint-disable @next/next/no-img-element */
 import styled from "styled-components"
-import { ContentContext } from "../.."
 import { Main } from "../style"
 
 export const Contact = () => {
-	const { images } = useContext(ContentContext)
-	const contacts = images?.contact
-
 	return (
 		<Main>
 			<Container className="changer">

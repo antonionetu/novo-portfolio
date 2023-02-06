@@ -8,8 +8,6 @@ export interface Images {
 	logo: string
 	profile: string
 	portfolio: Portfolio
-	contact: Contact
-	services: string
 }
 
 export interface Portfolio {
@@ -30,10 +28,4 @@ export interface Portfolio {
 
 	escolinha: string
 	blurred_escolinha: string
-}
-
-export interface Contact {
-	whatsapp: string
-	linkedin: string
-	github: string
 }

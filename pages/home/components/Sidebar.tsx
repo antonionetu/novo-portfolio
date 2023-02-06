@@ -3,6 +3,10 @@ import styled, { css } from "styled-components"
 import { useContext } from "react"
 import { ContentContext } from "../.."
 
+interface SectionChanger {
+	currentSection: string
+}
+
 export const SideBar = () => {
 	const { contents, setContents, images } = useContext(ContentContext)
 
@@ -114,7 +118,7 @@ const Container = styled.div`
 	}
 `
 
-const Navigation: any = styled.nav`
+const Navigation = styled.nav`
 	display: flex;
 	flex-direction: column;
 
@@ -144,7 +148,7 @@ const Navigation: any = styled.nav`
 				}
 			}
 
-			${(props: any): any => {
+			${(props: SectionChanger) => {
 				if (props.currentSection) {
 					return css`
 						li.${props.currentSection} {
@@ -159,7 +163,7 @@ const Navigation: any = styled.nav`
 			}}
 		}
 
-		${(props: any): any => {
+		${(props: SectionChanger) => {
 			if (props.currentSection) {
 				return css`
 					li.${props.currentSection} {

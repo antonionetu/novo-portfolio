@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import type { AppProps } from "next/app"
 import GlobalStyle from "../styles/GlobalStyle"
 
