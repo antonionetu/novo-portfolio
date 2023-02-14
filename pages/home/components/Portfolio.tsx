@@ -28,7 +28,7 @@ export const Portfolio = () => {
 					<Item
 						image={portfolio?.netflix_clone}
 						blur={portfolio?.blurred_netflix_clone}
-						link="https://github.com/antonionetodeveloper/netflix-clone"
+						link="https://netflix-clone-ebon-sigma.vercel.app"
 					/>
 					<hr />
 					<Item
@@ -40,7 +40,7 @@ export const Portfolio = () => {
 					<Item
 						image={portfolio?.CRUD}
 						blur={portfolio?.blurred_CRUD}
-						link="https://github.com/antonionetodeveloper/CRUD"
+						link="https://crud-antonio-neto.vercel.app"
 					/>
 					<hr />
 					<Item
@@ -52,7 +52,7 @@ export const Portfolio = () => {
 					<Item
 						image={portfolio?.login_azure}
 						blur={portfolio?.blurred_login_azure}
-						link="https://github.com/antonionetodeveloper/login_ui"
+						link="https://loginui-azure.vercel.app"
 					/>
 				</Section>
 			</Main>
