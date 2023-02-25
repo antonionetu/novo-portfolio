@@ -11,7 +11,7 @@ const nextConfig = {
 		styledComponents: true,
 	},
 	i18n: {
-		locales: ["pt-BR"],
+		locales: ["pt-BR", "en-US"],
 		defaultLocale: "pt-BR",
 	},
 }
