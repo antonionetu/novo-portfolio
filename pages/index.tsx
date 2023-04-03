@@ -7,7 +7,7 @@ export const ContentContext = createContext<ContextData>({} as ContextData)
 
 // eslint-disable-next-line react/prop-types
 export default function Index({ images }) {
-	const [contents, setContents] = useState("indexState")
+	const [contents, setContents] = useState("home")
 	return (
 		<>
 			<Head>

@@ -10,7 +10,7 @@ import { Contact } from "./Contact"
 export const Changer = () => {
 	const { contents } = useContext(ContentContext)
 
-	if (contents == "home" || contents == "indexState") {
+	if (contents == "home") {
 		return <Home />
 	}
 	if (contents == "about") {

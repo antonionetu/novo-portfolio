@@ -5,8 +5,7 @@ import { ContentContext } from "../.."
 import { Main } from "../style"
 
 export const Home = () => {
-	const { images, setContents } = useContext(ContentContext)
-	setContents("home")
+	const { images } = useContext(ContentContext)
 
 	return (
 		<div className="changer">
