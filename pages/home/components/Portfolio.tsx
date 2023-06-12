@@ -2,13 +2,13 @@
 import Image from "next/image"
 import { useContext } from "react"
 import styled from "styled-components"
-import { ContentContext } from "../.."
+import { ContentContext, cloudinaryBaseUrl } from "../.."
 import { Main } from "../style"
 
 interface PropsType {
 	link: string
 	image: string
-	blur: string
+	blurImageUrl: string
 }
 
 export const Portfolio = () => {
@@ -21,37 +21,37 @@ export const Portfolio = () => {
 				<Section>
 					<Item
 						image={portfolio?.jessica_bede}
-						blur={portfolio?.blurred_jessica_bede}
+						blurImageUrl={portfolio?.jessica_bede}
 						link="https://jessica-bede.vercel.app"
 					/>
 					<hr />
 					<Item
 						image={portfolio?.netflix_clone}
-						blur={portfolio?.blurred_netflix_clone}
+						blurImageUrl={portfolio?.netflix_clone}
 						link="https://netflix-clone-ebon-sigma.vercel.app"
 					/>
 					<hr />
 					<Item
 						image={portfolio?.escolinha}
-						blur={portfolio?.blurred_escolinha}
+						blurImageUrl={portfolio?.escolinha}
 						link="https://learning-next-beryl.vercel.app"
 					/>
 					<hr />
 					<Item
 						image={portfolio?.CRUD}
-						blur={portfolio?.blurred_CRUD}
+						blurImageUrl={portfolio?.CRUD}
 						link="https://crud-antonio-neto.vercel.app"
 					/>
 					<hr />
 					<Item
 						image={portfolio?.site2it}
-						blur={portfolio?.blurred_site2it}
+						blurImageUrl={portfolio?.site2it}
 						link="https://site2it.com"
 					/>
 					<hr />
 					<Item
 						image={portfolio?.login_azure}
-						blur={portfolio?.blurred_login_azure}
+						blurImageUrl={portfolio?.login_azure}
 						link="https://loginui-azure.vercel.app"
 					/>
 				</Section>
@@ -78,7 +78,7 @@ const Section = styled.section`
 	}
 `
 
-const Item = ({ link, image, blur }: PropsType) => {
+const Item = ({ link, image, blurImageUrl }: PropsType) => {
 	return (
 		<ItemContent>
 			<div>
@@ -89,7 +89,7 @@ const Item = ({ link, image, blur }: PropsType) => {
 					height={230}
 					layout="responsive"
 					placeholder="blur"
-					blurDataURL={blur}
+					blurDataURL={`${cloudinaryBaseUrl}/e_blur:1800/portfolio/portfolio/${blurImageUrl}`}
 				/>
 			</div>
 			<a href={link} target="_blank" rel="noreferrer">
