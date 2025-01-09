@@ -36,6 +36,11 @@ export const About = () => {
 }
 
 const Section = styled.section`
+	@media screen and (max-width: 500px) {
+		height: 65vh;
+		overflow: scroll;
+		padding-right: 20px;
+	}
 	p {
 		text-align: justify;
 		width: 80%;

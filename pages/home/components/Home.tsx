@@ -47,6 +47,8 @@ const Section = styled.section`
 		flex-direction: column-reverse;
 		width: 90%;
 		margin: auto;
+		position: relative;
+		bottom: 60px;
 	}
 	align-items: center;
 	gap: 1vw;
@@ -57,7 +59,7 @@ const Section = styled.section`
 		p {
 			margin-bottom: 2vw;
 			@media screen and (max-width: 500px) {
-				font-size: 5vw;
+				font-size: 4vw;
 				margin-bottom: 10vw;
 			}
 			text-align: justify;

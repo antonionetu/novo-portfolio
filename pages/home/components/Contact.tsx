@@ -61,6 +61,8 @@ const Container = styled.section`
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		position: relative;
+		bottom: 60px;
 	}
 
 	h2 {

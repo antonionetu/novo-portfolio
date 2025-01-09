@@ -70,6 +70,8 @@ export const Services = () => {
 const Container = styled.div`
 	@media screen and (max-width: 500px) {
 		width: 90%;
+		position: relative;
+		bottom: 60px;
 	}
 
 	main {
