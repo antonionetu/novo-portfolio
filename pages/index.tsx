@@ -11,7 +11,7 @@ export default function Index() {
 	return (
 		<>
 			<Head>
-				<title>Portflio</title>
+				<title>Portfolio</title>
 			</Head>
 
 			<ContentContext.Provider value={{ contents, setContents, images }}>
