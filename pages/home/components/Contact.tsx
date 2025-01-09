@@ -38,7 +38,7 @@ export const Contact = () => {
 					</div>
 					<div className="icon">
 						<a
-							href="https://github.com/antonionetodeveloper"
+							href="https://github.com/antonionetu"
 							target="_blank"
 							rel="noreferrer"
 						>
