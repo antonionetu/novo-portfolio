@@ -5,6 +5,7 @@ export interface ContextData {
 }
 
 export interface Images {
+	experiences: any
 	logo: string
 	profile: string
 }
