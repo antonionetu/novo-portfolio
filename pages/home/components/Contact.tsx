@@ -62,7 +62,7 @@ const Container = styled.section`
 		flex-direction: column;
 		align-items: center;
 		position: relative;
-		bottom: 60px;
+		bottom: 80px;
 	}
 
 	h2 {
