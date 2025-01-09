@@ -66,7 +66,7 @@ export const Experience = () => {
 			title: "Sinqia",
 			description:
 				"Part of a team that developed a product for a major bank in Brazil, working on high-complexity technological solutions.",
-			link: "https://www.bank-product.com",
+			link: "https://sinqia.com.br",
 			image: experiences_images?.sinqia,
 			blurImageUrl: experiences_images?.sinqia,
 			date: "2024",
