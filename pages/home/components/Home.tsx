@@ -13,15 +13,15 @@ export const Home = () => {
 				<Section>
 					<div className="text">
 						<p>
-							Desenvolvedor de software cursando Ciência da Computação na
-							Universidade Tiradentes (UNIT).
+							Software developer since 2018 with 3 years of experience, studying
+							Computer Systems at RTU and Computer Science at UNIT.
 						</p>
 						<div className="stacks">
-							<p>Next</p>
+							<p>Backend</p>
 							<VerticalLine />
-							<p>React</p>
+							<p>Frontend</p>
 							<VerticalLine />
-							<p>Node</p>
+							<p>Python</p>
 							<VerticalLine />
 							<p>TypeScript</p>
 						</div>

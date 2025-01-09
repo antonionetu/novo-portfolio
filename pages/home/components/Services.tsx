@@ -8,42 +8,53 @@ export const Services = () => {
 				<section className="services">
 					<div className="text">
 						<p className="quote">
-							Meu trabalho é criar soluções para serem acessadas a qualquer
-							hora, em qualquer lugar ou dispositivo.
+							My job is to create solutions that can be accessed anytime,
+							anywhere, on any device.
 						</p>
 					</div>
 				</section>
 				<section className="stacks">
-					<h2>Minhas stacks</h2>
+					<h2>My stacks</h2>
 					<div className="stacks">
 						<div className="front-end">
 							<h3>front-end</h3>
 							<ul>
-								<li>Next JS</li>
-								<li>React JS</li>
-								<li>Styled Components</li>
-								<li>TypeScript</li>
-								<li>Html</li>
-								<li>Css</li>
+								<li>React</li>
+								<li>Vue</li>
+								<li>Angular</li>
 								<li>Javascript</li>
+								<li>TypeScript</li>
+								<li>Ajax</li>
+								<li>JQuery</li>
+								<li>Css</li>
+								<li>Bootstrap</li>
+								<li>Tailwind</li>
+								<li>Metronic</li>
 							</ul>
 						</div>
 						<div className="back-end">
 							<h3>Back-end</h3>
 							<ul>
-								<li>Next JS</li>
+								<li>Django</li>
+								<li>FastAPI</li>
+								<li>Go</li>
 								<li>Node JS</li>
+								<li>MySQL</li>
+								<li>Redis</li>
 								<li>MongoDB</li>
-								<li>Axios</li>
-								<li>TypeScript</li>
+								<li>AWS</li>
+								<li>RDS</li>
+								<li>S3</li>
+								<li>EC2</li>
+								<li>Docker</li>
 							</ul>
 						</div>
 						<div className="tools">
-							<h3>Adicionais</h3>
+							<h3>Plus</h3>
 							<ul>
-								<li>Git/Github</li>
+								<li>Git</li>
+								<li>Unit Tests</li>
 								<li>Clean Code</li>
-								<li>Rest API</li>
 								<li>Linux</li>
 								<li>SCRUM</li>
 								<li>UI / UX</li>
@@ -64,7 +75,9 @@ const Container = styled.div`
 	main {
 		section {
 			display: flex;
-			gap: 5vw;
+			justify-content: center;
+			gap: 8vw;
+			margin-bottom: 20px;
 
 			div.text {
 				display: flex;

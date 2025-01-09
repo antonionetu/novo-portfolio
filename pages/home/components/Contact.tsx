@@ -6,7 +6,7 @@ export const Contact = () => {
 	return (
 		<Main>
 			<Container className="changer">
-				<h2>Entre em contato</h2>
+				<h2>Contact Me</h2>
 				<div className="icons">
 					<div className="icon">
 						<a

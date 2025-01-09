@@ -3,27 +3,26 @@ import { ContentContext } from "../.."
 
 import { Home } from "./Home"
 import { About } from "./About"
-import { Portfolio } from "./Portfolio"
+import { Experience } from "./Experience"
 import { Services } from "./Services"
 import { Contact } from "./Contact"
 
 export const Changer = () => {
 	const { contents } = useContext(ContentContext)
 
-	if (contents == "home") {
-		return <Home />
-	}
-	if (contents == "about") {
-		return <About />
-	}
-	if (contents == "portfolio") {
-		return <Portfolio />
-	}
-	if (contents == "services") {
-		return <Services />
-	}
-	if (contents == "contact") {
-		return <Contact />
+	switch (contents) {
+		case "home":
+			return <Home />
+		case "about":
+			return <About />
+		case "experience":
+			return <Experience />
+		case "services":
+			return <Services />
+		case "contact":
+			return <Contact />
+		default:
+			return <></>
 	}
 }
 

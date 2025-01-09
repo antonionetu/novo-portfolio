@@ -11,7 +11,7 @@ export default function Index() {
 	return (
 		<>
 			<Head>
-				<title>Portifólio</title>
+				<title>Portflio</title>
 			</Head>
 
 			<ContentContext.Provider value={{ contents, setContents, images }}>
@@ -24,14 +24,15 @@ export default function Index() {
 const images = {
 	logo: "/logo_be87dl.png",
 	profile: "/myPhoto_jsruis.png",
-	portfolio: {
-		jessica_bede: "/jessica_bede_kjkilr.png",
-		blurred_jessica_bede: "/jessica_bede_kjkilr.png",
-		netflix_clone: "/netflix_clone_xkzipt.png",
-		CRUD: "/CRUD_ynni3g.png",
-		login_azure: "/login_azure_flhiqx.png",
-		site2it: "/site2it_w2wt53.png",
-		escolinha: "/escolinha_orbnuy.png",
+	experiences: {
+		ufs: "/dlkkwxfm30czqovkabtw.png",
+		freelancer: "/nhnsucs0d5xtyjwp39oj.png",
+		quantum: "/lnuzcr0hi0mcnugxdjfi.png",
+		tiradentesGroup: "/kbn8x2pvqdjtdhbyfuoe.png",
+		apoioFiel: "/dijv9wqr14vieg3wb0b8.png",
+		sinqia: "/x7xtybqu2cpxryrddtsd.png",
+		unit: "/wlddoteqhaly2emgqhtx.png",
+		rtu: "/oceurxqvrilecncgr3pr.png",
 	},
 	contact: {
 		whatsapp: "/wpp_nsmjwi.png",
@@ -41,3 +42,4 @@ const images = {
 }
 
 export const cloudinaryBaseUrl = `https://res.cloudinary.com/dxujuvdh8/image/upload/v1675471479/`
+export const newCloudinaryBaseUrl = `https://res.cloudinary.com/dgqppfmnh/image/upload/v1736394710/portfolio/`

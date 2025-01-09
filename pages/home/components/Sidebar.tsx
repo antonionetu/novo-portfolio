@@ -44,15 +44,15 @@ export const SideBar = () => {
 								setContents("about")
 							}}
 						>
-							<p>Sobre mim</p>
+							<p>About me</p>
 						</li>
 						<li
-							className="portfolio"
+							className="experience"
 							onClick={() => {
-								setContents("portfolio")
+								setContents("experience")
 							}}
 						>
-							<p>Portifólio</p>
+							<p>Experience</p>
 						</li>
 						<li
 							className="services"
@@ -60,7 +60,7 @@ export const SideBar = () => {
 								setContents("services")
 							}}
 						>
-							<p>Serviços</p>
+							<p>Services</p>
 						</li>
 						<li
 							className="contact"
@@ -68,7 +68,7 @@ export const SideBar = () => {
 								setContents("contact")
 							}}
 						>
-							<p className="lastWord">Contato</p>
+							<p className="lastWord">Contact</p>
 						</li>
 					</ul>
 				</Navigation>
@@ -133,6 +133,7 @@ const Navigation = styled.nav`
 	ul {
 		list-style-type: none;
 		display: flex;
+		padding: 0px;
 		flex-direction: column;
 		gap: 1vw;
 
@@ -145,6 +146,11 @@ const Navigation = styled.nav`
 				p {
 					font-size: 4vw;
 					text-align: center;
+				}
+				:hover {
+					padding: 2px 8px !important;
+					cursor: pointer;
+					color: #fff;
 				}
 			}
 
@@ -188,10 +194,9 @@ const Navigation = styled.nav`
 			transition: 0.3s;
 			@media screen and (min-width: 500px) {
 				:hover {
-					font-size: 2vw;
+					padding: 8px 0px !important;
 					cursor: pointer;
 					color: #fff;
-					padding: 10px 0px 10px 5px;
 				}
 			}
 		}
