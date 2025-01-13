@@ -193,6 +193,7 @@ const ImageWrapper = styled.div`
 	height: 120px;
 	border-radius: 10px;
 	overflow: hidden;
+	margin-left: 8px;
 `
 
 const Content = styled.div`
