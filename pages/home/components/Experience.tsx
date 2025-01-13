@@ -37,6 +37,15 @@ export const Experience = () => {
 			date: "2020 - 2021",
 		},
 		{
+			title: "Computer Science at UNIT",
+			description:
+				"Currently studying Computer Science at UNIT, expanding both academic and practical knowledge in the field.",
+			link: "https://www.unit.br",
+			image: experiences_images?.unit,
+			blurImageUrl: experiences_images?.unit,
+			date: "2023 - Present",
+		},
+		{
 			title: "Quantum educ.",
 			description:
 				"Worked in a startup for almost 2 years, developing skills in different technologies and participating in innovative projects.",
@@ -70,15 +79,6 @@ export const Experience = () => {
 			image: experiences_images?.sinqia,
 			blurImageUrl: experiences_images?.sinqia,
 			date: "2024",
-		},
-		{
-			title: "Computer Science at UNIT",
-			description:
-				"Currently studying Computer Science at UNIT, expanding both academic and practical knowledge in the field.",
-			link: "https://www.unit.br",
-			image: experiences_images?.unit,
-			blurImageUrl: experiences_images?.unit,
-			date: "2023 - Present",
 		},
 		{
 			title: "Computer Systems at RTU",
